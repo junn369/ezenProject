@@ -9,10 +9,9 @@
 <title>Insert title here</title>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
-<script type="text/javascript" src="./mypage.js"></script>
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"></link>
-    <script type="text/javascript" src="mypage.js"></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -138,7 +137,7 @@ small{
 	
 	
 	  <!-- mypage menu start -->
-
+<div class="container">
 	<%@ include file = "mypagemenu.jsp"%>
   <!-- mypage menu end -->
   
@@ -156,8 +155,8 @@ small{
             <div class="media flex-column flex-sm-row">
                 <div class="media-body ">
                     <h5 class="bold">${orderInfo.ezenbooks.book_title}</h5>
-                    <fmt:parseNumber var="qty" value="${orderInfo.order_cost / orderInfo.ezenbooks.book_price}" integerOnly="true" />
-                    <p class="text-muted">주문수량 : ${qty}권</p>
+                    
+                    <p class="text-muted">주문수량 : ${orderInfo.book_qty}권</p>
                     <h4 class="mt-3 mb-4 bold">계산금액:<span class="mt-5"></span> ${orderInfo.order_cost}원 <span class="small text-muted"> (&#8361;) </span></h4>
                     <p class=" text-dark">작가명 : <span class=" text-muted"> ${orderInfo.ezenbooks.book_author}</span> </p>
 					<p class=" text-dark">출판사 : <span class=" text-muted">${orderInfo.ezenbooks.book_publisher}</span></p>
@@ -167,6 +166,7 @@ small{
                 <c:url var="detail_path" value="/book/book_detail.do">
 										
 										<c:param name="num" value="${orderInfo.ezenbooks.num }" />
+										
 									</c:url>
                 <a href="detail_path"> 
                 <img class="align-self-center img-fluid" src="../assets/img/${orderInfo.ezenbooks.book_img}" width="180 " height="180">
@@ -184,7 +184,7 @@ small{
         </div>
     </div>
 </div>
-
+</div>
   <!-- order detail end -->
     <!-- Footer Start -->
  <%@ include file = "../common/footer.jsp"%>
