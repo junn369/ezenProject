@@ -6,7 +6,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>주문 상세</title>
+<link
+      rel="short icon"
+      href="../assets/img/favicon.png"
+      type="image/x-icon"
+    />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script  src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
 
@@ -177,7 +182,7 @@ small{
     
          <div class="card-footer  bg-white px-sm-3 pt-sm-4 px-0">
             <div class="row text-center  ">
-                <div class="col my-auto  border-line " onclick="window.open('${path2}','window_name', 'width=1200, height=600, location=no, status=no, scrollbars=yes');"><h5 >배송확인</h5></div>
+                <div class="col my-auto  border-line " onclick="window.open('${path2}','window_name', 'width=1200, height=900, location=no, status=no, scrollbars=yes');"><h5 >배송확인</h5></div>
                 <div class="col my-auto  border-line " ><h5 >구매확정</h5></div>
                 <div class="col my-auto  border-line " onclick="ordercancel('${path3}')"><h5>구매취소</h5></div>
                 <div class="col my-auto   border-line " onclick="location.href='${path}'"><h5>주문목록</h5></div>

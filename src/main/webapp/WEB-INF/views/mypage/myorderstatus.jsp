@@ -5,19 +5,18 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>배송 현황</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"></link>
 
 <style>
-/*배송확인 */
 body{
 	color: #000;
 	overflow-x: hidden;
 	height: 100%;
-	background-color: #b0c4de;
+	background-color: #2ecc71;
 	background-repeat: no-repeat
 }
 
@@ -151,14 +150,11 @@ if(progressnum > 1){
 </script>
 </head>
 <body>
-
-
-
 <div class="container px-1 px-md-4 py-5 mx-auto">
     <div class="card">
         <div class="row d-flex justify-content-between px-3 top">
             <div class="d-flex">
-                <h5>ORDER <span class="text-primary font-weight-bold"> ${orderstatus.order_number}</span></h5>
+                <h5>ORDER <span class="text-primary font-weight-bold"># ${orderstatus.order_number}</span></h5>
             </div>
             <div class="d-flex flex-column text-sm-right">
                 <p class="mb-0 font-weight-bold">주문고객 :<span> ${orderstatus.ezenmembers.member_name}</span></p>
@@ -226,3 +222,4 @@ if(progressnum > 1){
     </div>
 </div>
 </body>
+</html>
