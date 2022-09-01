@@ -65,8 +65,7 @@
 			$("#member_pass").val($("#new_pass").val());
 			alert("비밀번호가 변경되었습니다.")
 			
-			$("#pass_change").modal("hide");
-			
+			$("#pass_change").modal("hide");			
 			
 		})
 		
@@ -123,8 +122,10 @@
   </div>
    <div class="col-md-7">
     <label for="inputPassword4" class="form-label">비밀번호</label></br>
-    <input style=" width: 41%; float: left;" type="password" class="form-control" name="member_pass" id="member_pass" value="${memberInfo.member_pass }" readonly="readonly">
-      <button style="width:56%; float: right;" type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#pass_change">
+    <input style=" width: 41%; float: left;" type="password" class="form-control" name="member_pass" 
+    		id="member_pass" value="${memberInfo.member_pass }" readonly="readonly">
+      <button style="width:56%; float: right;" type="button" class="btn btn-dark" 
+      			data-bs-toggle="modal" data-bs-target="#pass_change">
   	비밀번호 변경하기
 	</button>
       </div>
@@ -140,15 +141,18 @@
       <div class="modal-body">
         <div class="form-group mb-3">
         <label  class="col-form-label"><strong>기존 비밀번호</strong></label>
-						<input type="password" class="form-control" name="current_pass" id="current_pass" placeholder="기존 비밀번호" required="required">		
+						<input type="password" class="form-control" name="current_pass" id="current_pass" 
+								placeholder="기존 비밀번호" required="required">		
 					</div>
 					<div class="form-group mb-3">
 					<label  class="col-form-label"><strong>새로운 비밀번호</strong></label>
-						<input type="password" class="form-control" name="new_pass" id="new_pass" placeholder="새로운 비밀번호" required="required">	
+						<input type="password" class="form-control" name="new_pass" id="new_pass" 
+								placeholder="새로운 비밀번호" required="required">	
 					</div>  
 					<div class="form-group mb-3">
 					<label  class="col-form-label"><strong>새로운 비밀번호 확인</strong></label>
-						<input type="password" class="form-control" name="new_pass_check" id="new_pass_check" placeholder="비밀번호 확인" required="required">	
+						<input type="password" class="form-control" name="new_pass_check" id="new_pass_check" 
+								placeholder="비밀번호 확인" required="required">	
 					</div>
       </div>
       <div class="modal-footer">
