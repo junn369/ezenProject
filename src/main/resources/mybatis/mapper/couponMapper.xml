@@ -17,10 +17,7 @@
   <id property="member_number" column="member_number"/>
   <id property="coupon_type" column="coupon_type"/>
   <id property="coupon_value" column="coupon_value"/>
-
   <collection property="ezenmembers" resultMap="MemberDTO"/>
-  	
-
  </resultMap>
     
     
